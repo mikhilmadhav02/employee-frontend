@@ -1,0 +1,81 @@
+
+
+
+<div style="margin-bottom:10px;" class="container-fluid" >
+
+    <div class="row mt-3">
+        <div class="col">
+            <h4 style="margin-left:15px;" class="  " ><i class="fa-solid fa-user-plus fa-sm"></i>Add New Employe
+                </h4>
+        </div>
+    </div>
+    
+    <!-- input boxes -->
+    <div id="inputbox" >
+    
+    <div style="margin-left: 30px;margin-top: 20px;" class="row">
+        <div class="col-"></div>
+        <div class="col-6 ms-4">
+    
+    <form  [formGroup]="eform" class=" border p-3" >
+    
+        <input name="id" formControlName="id" id="input" placeholder="Employee Id" class="form-control mb-2" >
+        <div class="text-danger" *ngIf="eform.get('id')?.errors&& eform.get('id')?.touched" >please eneter valid details</div>
+        <input name="name" formControlName="name" id="input" placeholder="Employee Name" class="form-control mb-2 " >
+         <div class="text-danger" *ngIf="eform.get('name')?.errors && eform.get('name')?.touched" >please eneter valid details</div>
+        <input name="image" formControlName="image" id="input" placeholder="Employee Image URL"  class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="eform.get('image')?.errors && eform.get('image')?.touched" >please type valid details</div>
+        <input name="mobile" formControlName="mobile" id="input" placeholder="Employee Mobile" class="form-control mb-2 ">
+        <div class="text-danger" *ngIf="eform.get('mobile')?.errors && eform.get('mobile')?.touched" >please type valid details</div>
+        <input name="email" formControlName="email" id="input" placeholder="Employee Email" class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="eform.get('email')?.errors && eform.get('email')?.touched" >please type valid details</div>
+        <input name="position" formControlName="position" id="input" placeholder="Employee Position" class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="eform.get('position')?.errors && eform.get('position')?.touched" >please type valid details</div>
+        <input name="address" formControlName="address" id="input"  placeholder="Employee Address" class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="eform.get('address')?.errors && eform.get('address')?.touched" >please type valid details</div>
+        <input name="username" formControlName="username" id="input"  placeholder="Employee Username" class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="eform.get('username')?.errors && eform.get('username')?.touched" >please type valid details</div>
+        <input name="password" formControlName="password" id="input"  placeholder="Employee Password" class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="eform.get('password')?.errors && eform.get('password')?.touched" >please type valid details</div>
+        <div>
+
+
+             </div>
+    
+    
+    <div style="margin-top:12px;margin-bottom:-4px;" class="d-flex justify-content-end " >
+        <button (click)="createmploye()" style="width: 90px;height: 33px;display: flex;justify-content: center;align-items: center;" class="btn btn-success" >Create</button>
+     <a style="width:90px;height:33px;display: flex;justify-content: center;align-items: center;" class="btn btn-warning ms-3 align-items-center" routerLink="/adallpage">Close</a>
+    </div>
+    
+</form>
+    
+        </div>
+        <div class="col d-flex justify-content-center ">
+
+
+
+
+            <!-- card -->
+            <div  class="card" style="height: 420px; width:310px">
+               
+                <div class="card-body text-center text-align-center ">
+                    <img style="margin-top:-10px;margin-bottom:20px;" width="140px" alt=""  height="140px" [src]="eform.value.image"  >
+                  <p style="margin-top:-7px;" > Name:{{eform.value.name}}</p>
+               <p style="margin-top:-7px;">Position:{{eform.value.position}}</p>
+               <p style="margin-top:-7px;" >Mobile:{{eform.value.mobile}}</p>
+               <p style="margin-top:-7px;" >Email:{{eform.value.email}}<p>
+               <p style="margin-top:-7px;" >Address:{{eform.value.address}}</p>
+               <p style="margin-top:-7px;" >Username:{{eform.value.username}}</p>
+               <p style="margin-top:-7px;" >Password:{{eform.value.password}}</p>
+                
+             </div>
+            <!-- card ends -->
+            
+        </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    

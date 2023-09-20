@@ -1,0 +1,81 @@
+<div>
+
+<!-- search tag and add tag -->
+<div style="margin-top: 60px;margin-bottom:77px;" class="row">
+    <div class="col-1">
+        
+    </div>
+    <div style="display: flex;" class="col-3">
+        <input name="searchkey" [(ngModel)]="searchkey" style="height:32px;" class="form-control" placeholder="search your employee" type="text">
+          <span style="margin-left:6px;margin-top:1px;font-size:.5cm;"><i class="fa-solid fa-magnifying-glass"></i></span>
+    </div>
+    <div class="col-6"></div>
+    <div class="col-2">
+        <button routerLink="/addemploye" style="width:93px;height:32px;display: flex; justify-content: center;align-items: center;" class="btn btn-success" ><i class="fa-solid fa-user-plus"></i>  Add</button>
+    </div>
+</div>
+
+<!--employee list  -->
+
+
+
+<ng-container >
+    <div style="margin-top: 19px ;margin-bottom:165px;  " >
+       
+        <div class="row">
+            
+            <div *ngFor="let employe of allemployee | filter: searchkey: 'name' "  style="  border-right:solid.035cm;  border-color: lightgrey;padding-left:50px;   margin-top: 10px; margin-bottom:px;  height: 170px;"  class="col-6 ">
+               <div class="row">
+                
+                <div routerLink="/viewemploye/{{employe.id}}" style="margin-left:-20px;" class="col-3">
+                    <div style="height: 160px;display: flex; justify-content: center; align-items: center;" >
+                        <div><img width="120px" height="120px" [src]="employe.image" alt=""></div>
+                         
+                     </div>
+                </div>
+                <div style="margin-left:0px;" class="col-8">
+                    <div  style="margin-top: 30px;" >
+                       
+                       <div routerLink="/viewemploye/{{employe.id}}" style="display: flex;" >
+                        <p style="font-size:.55cm; font-weight: 630;color: rgb(99, 98, 98);" class="" >{{employe.name}}</p>
+                        </div>
+                       <div routerLink="/viewemploye/{{employe.id}}" class="" style=" margin-left:-230px; display: flex;justify-content: center;align-items: center; margin-top:-10px;  color:black; "><i class="fa-solid fa-briefcase"></i> <span style="font-size:.46cm;margin-left: 5px;">{{employe.position}}</span></div>
+        
+                       
+        
+                              <div routerLink="/viewemploye/{{employe.id}}" style="display: flex;justify-content: center;align-items: center;  margin-top:-21px ; margin-left:70px; " ><i class="fa-solid fa-phone "></i>   <span  style="font-size:.43cm;margin-left: 5px;margin-top:-3px;">{{employe.mobile}}</span></div>
+                    
+                                
+                         <div routerLink="/viewemploye/{{employe.id}}" style="font-weight: 450;color: rgba(106, 105, 105, 0.877); font-size: .37cm; margin-top:23px;" >Tap to see full details</div>
+                          
+                            <div (click)="deletemploye(employe.id)"  style=" margin-top:-120px; margin-left:380px;" ><i  class="fa-solid fa-trash text-secondary text-danger fa-lg"></i></div>
+                    
+                              <div routerLink="/editemploye/{{employe.id}}" style="font-size:.375cm;background-color:rgb(186, 190, 186); color:rgb(71, 70, 70);border: solid .005cm rgb(200, 199, 199); border-radius: .09cm; display: flex; justify-content: center; align-items: center; height:26px; width:70px ; margin-top:65px; margin-left:350px; " > Edit</div>
+                    </div>
+                    
+                </div>
+                
+               </div>
+            </div>
+        
+            <div class="col-6"></div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+</ng-container>
+
+
+<!--  -->
+</div>

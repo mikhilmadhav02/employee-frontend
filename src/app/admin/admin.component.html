@@ -1,0 +1,20 @@
+<!-- login page -->
+
+<div>
+    <div style="width:406px; height: 400px;margin-left:440px;margin-top: 130px;margin-bottom:-20px;" >
+        <h4>Admin Login Page</h4>
+        <form [formGroup]="login" class="border border-rounded  " >
+        <input name="username" formControlName="username" style="width:370px;" class="form-control m-3" type="text" placeholder="enter username">
+        <input name="password" formControlName="password" style="width:370px;"  class="form-control m-3" type="password" placeholder="enter password">
+        <div>
+            <button (click)="click()" style="width:87px;height:34px;display: flex;justify-content: center;align-items: center;" class="btn btn-success m-3">Login</button>
+        
+            <div *ngIf="!words" style="color: red; font-weight: 500; font-size:.46cm; margin:15px;"  >Wrong Username/Password</div>
+        </div>
+        </form>
+    </div>
+    
+    
+    
+    </div>
+    

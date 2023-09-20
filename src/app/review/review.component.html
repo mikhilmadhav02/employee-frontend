@@ -1,0 +1,88 @@
+<div>
+
+
+
+<div style="margin-bottom: 130px;" class="row">
+<div class="col-3"></div>
+<div class="col-6">
+    <form [formGroup]="formreview" >
+        
+            <div style="margin-top:120px;margin-left:-20px;margin-bottom:60px;" class="row">
+                 <div class="col-6">
+            
+                    <div id="fullbox" >
+                        <div >Communication   </div>
+                        <select name="one" formControlName="one" id="reviewbox"  class="form-control mb-1" >
+                            <option disabled selected hidden ></option>
+                            <option value="Good" >Good</option>
+                            <option value="Average" >Average</option>
+                            <option value="Poor" >Poor</option>
+                           </select>
+                  </div> 
+            
+                  <div id="fullbox">
+                    <div >Creativity  </div>
+                    <select name="two" formControlName="two" style="margin-left:50px;" id="reviewbox"  class="form-control mb-1" >
+                        <option disabled selected hidden ></option>
+                        <option value="Good" >Good</option>
+                        <option value="Average" >Average</option>
+                        <option value="Poor" >Poor</option>
+                       </select>
+              </div> 
+            
+            
+                </div>
+                <div class="col-6">
+            
+                    <div id="fullbox" >
+                        <div >Productivity   </div>
+                        <select name="three" formControlName="three" id="reviewbox"  class="form-control mb-1" >
+                            <option disabled selected hidden ></option>
+                            <option value="Good" >Good</option>
+                            <option value="Average" >Average</option>
+                            <option value="Poor" >Poor</option>
+                           </select>
+                  </div> 
+            
+                  <div id="fullbox" >
+                    <div >Adaptability   </div>
+                    <select name="four" formControlName="four" style="display: flex;align-items: center;justify-content: center;" id="reviewbox"  class="form-control mb-1" >
+                        <option disabled selected hidden ></option>
+                        <option value="Good" style="display: flex;align-items: center;justify-content: center;" >Good</option>
+                        <option value="Average" >Average</option>
+                        <option value="Poor" >Poor</option>
+                       </select>
+              </div> 
+            
+                </div>  
+            
+                
+            </div>
+       
+       
+       
+            <div style="display: flex;margin-top:20px;margin-bottom: 5px; margin-left:230px;" >
+                <button routerLink="/emallpage" style="margin-top:px; margin-left:px; width:90px;height:33px;display: flex;justify-content: center;align-items: center;"  class="btn btn-secondary" >Close</button>
+            
+                <button  (click)="sendreview()" style="margin-top:px; margin-left:15px; width:90px;height:33px;display: flex;justify-content: center;align-items: center;" class="btn btn-primary">Send</button>
+              </div>
+       
+
+   
+    </form>
+</div>
+<div class="col-3"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

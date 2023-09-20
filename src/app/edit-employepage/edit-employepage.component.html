@@ -1,0 +1,88 @@
+
+
+<div style="margin-bottom:10px;" class="container-fluid" >
+
+    <div class="row mt-3">
+        <div class="col">
+            <h4 style="margin-left:15px;" class="  " ><i class="fa-solid fa-user-plus fa-sm"></i>Edit Employee
+                </h4>
+        </div>
+    </div>
+    
+    <!-- input boxes -->
+    <div id="inputbox" >
+    
+    <div style="margin-left: 30px;margin-top: 20px;" class="row">
+        <div class="col-"></div>
+        <div class="col-6 ms-4">
+    
+    <form [formGroup]="editform" class=" border p-3" >
+    
+        
+        
+         
+        <input placeholder="enter name" value={{editform.value.name}} name="name" formControlName="name" id="input"  class="form-control mb-2 " >
+         <div class="text-danger" *ngIf="editform.get('name')?.errors && editform.get('name')?.touched" >please eneter valid details</div>
+       
+         <input placeholder="enter image url" value={{editform.value.image}} name="image" formControlName="image" id="input"  class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="editform.get('image')?.errors && editform.get('image')?.touched" >please type valid details</div>
+       
+        <input placeholder="enter mobile" value={{editform.value.mobile}} name="mobile" formControlName="mobile" id="input"  class="form-control mb-2 ">
+        <div class="text-danger" *ngIf="editform.get('mobile')?.errors && editform.get('mobile')?.touched" >please type valid details</div>
+       
+        <input placeholder="enter email" value={{editform.value.email}} name="email" formControlName="email" id="input"  class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="editform.get('email')?.errors && editform.get('email')?.touched" >please type valid details</div>
+        
+        <input placeholder="enter position" value={{editform.value.position}} name="position" formControlName="position" id="input"  class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="editform.get('position')?.errors && editform.get('position')?.touched" >please type valid details</div>
+        
+        <input placeholder="enter address" value="{{editform.value.address}}" name="address" formControlName="address" id="input"   class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="editform.get('address')?.errors && editform.get('address')?.touched" >please type valid details</div>
+       
+        <input placeholder="enter username" value="{{editform.value.username}}" name="username" formControlName="username" id="input"   class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="editform.get('username')?.errors && editform.get('username')?.touched" >please type valid details</div>
+        
+        <input placeholder="enter password" value={{editform.value.password}} name="password" formControlName="password" id="input"  class="form-control mb-2 " >
+        <div class="text-danger" *ngIf="editform.get('password')?.errors && editform.get('password')?.touched" >please type valid details</div>
+         <div>
+
+
+         </div>
+    
+    
+    <div style="margin-top:12px;margin-bottom:-4px;" class="d-flex justify-content-end " >
+        <button (click)="editemploye()" style="width: 90px;height: 33px;display: flex;justify-content: center;align-items: center;" class="btn btn-success" >Create</button>
+     <a style="width:90px;height:33px;display: flex;justify-content: center;align-items: center;" class="btn btn-warning ms-3 align-items-center" routerLink="/adallpage">Close</a>
+    </div>
+    
+ </form>
+     </div>
+        <div class="col d-flex justify-content-center  "  >
+
+
+
+            <!-- card -->
+            <div  class="card" style="height: 420px; width:310px">
+               
+                <div  class="card-body text-center text-align-center ">
+                    <img   style="margin-top:-9px;margin-bottom:20px;" width="140px" alt=""  height="140px" [src]="editform.value.image"  >
+                  <p  style="margin-top:-6px;" > Name: {{editform.value.name}}</p>
+               <p  style="margin-top:-6px;">Position: {{editform.value.position}}</p>
+               <p  style="margin-top:-6px;" >Mobile: {{editform.value.mobile}}</p>
+               <p style="margin-top:-6px;" >Email: {{editform.value.email}}<p>
+               <p  style="margin-top:-6px;" >Address: {{editform.value.address}}</p>
+               <p  style="margin-top:-6px;" >Username: {{editform.value.username}}</p>
+               <p  style="margin-top:-6px;" >Password: {{editform.value.password}}</p>
+              
+              </div>
+            <!-- card ends -->
+            <div></div>
+            
+        </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+

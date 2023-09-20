@@ -1,0 +1,34 @@
+<!-- navbar -->
+<nav style="height:54px;" class="navbar navbar-expand-lg bg-warning">
+    <div class="container-fluid">
+      <a style="margin-left:15px;font-weight: 500;" class="navbar-brand" href="">Feedback Page</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div style="margin-left:940px;" class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <!-- based on sign in condition -->
+          <li *ngIf="!svalue" class="nav-item dropdown">
+            <a style="font-size:.48cm; font-weight: 500;color:black;" class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                 <span  style="margin-left:10px;">Sign In</span>
+                  </a>
+            <ul  style="text-decoration: none;" class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/admin">Admin</a></li>
+              <li><a class="dropdown-item" routerLink="/employee">Employee</a></li>
+              
+            </ul>
+          </li>
+          
+<!-- signout condition -->
+<a *ngIf="svalue" style="font-size:.48cm; font-weight: 500;color:black;"   role="button"  aria-expanded="false">
+  <i class="fa-solid fa-right-to-bracket"></i>
+   <span (click)="signout()" style="margin-left:10px;">Sign Out</span>
+    </a>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
